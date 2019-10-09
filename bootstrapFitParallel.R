@@ -19,16 +19,16 @@
 #'           (i) Data frame of resampled effect estimates
 #'           (ii) List of predicted responses for each bootstrapped model
 #'
-bootstrapFitForEach <- function(model
-                                ,data
-                                ,id_var
-                                ,x_var = NA
-                                ,response
-                                ,seed
-                                ,max_boot
-                                ,type
-                                ,data_new
-                                ,n_cores) {
+bootstrapFitParallel <- function(model
+                                 ,data
+                                 ,id_var
+                                 ,x_var = NA
+                                 ,response
+                                 ,seed
+                                 ,max_boot
+                                 ,type
+                                 ,data_new
+                                 ,n_cores) {
   
   # Packages
   require(doParallel)
