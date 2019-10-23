@@ -2,11 +2,12 @@
 #' @author Ed Wilkes
 #' 
 #' @description performs non-parametric bootstrap resampling of a given data frame by
-#' case resampling only
+#' cluster resampling only
 #' 
 #' @param data Data frame containing original data to be sampled
+#' @param id_var String denoting the variable to cluster data by
 #'
-#' @return Data frame containing case bootstrap resampled data
+#' @return Data frame containing cluster bootstrap resampled data
 #'
 clusterBootSample <- function(data, id_var) {
   
