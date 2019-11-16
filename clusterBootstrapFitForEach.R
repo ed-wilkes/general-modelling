@@ -19,7 +19,7 @@
 #'           (ii) List of predicted responses for each bootstrapped model
 #'
 clusterBootstrapFitForEach <- function(data
-                                       ,x_var = NA
+                                       ,x_var = NULL
                                        ,id_var
                                        ,seed
                                        ,response
@@ -40,7 +40,7 @@ clusterBootstrapFitForEach <- function(data
   ## Formula definition ----
   if (type == "mixed") {
     
-    form <- as.formula(paste0(response, " ~1", x_var, "+ (1|",id_var,")"))
+    form <- as.formula(paste0(response, " ~1 +", x_var, "+ (1|",id_var,")"))
     
   } else if (type == "random") {
     
