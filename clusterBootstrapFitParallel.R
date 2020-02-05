@@ -18,15 +18,15 @@
 #'           (i) Data frame of resampled effect estimates
 #'           (ii) List of predicted responses for each bootstrapped model
 #'
-clusterBootstrapFitForEach <- function(data
-                                       ,x_var = NULL
-                                       ,id_var
-                                       ,seed
-                                       ,response
-                                       ,max_boot = 999
-                                       ,type = "mixed"
-                                       ,data_new
-                                       ,n_cores) {
+clusterBootstrapFitParallel <- function(data
+                                        ,x_var = NULL
+                                        ,id_var
+                                        ,seed
+                                        ,response
+                                        ,max_boot = 999
+                                        ,type = "mixed"
+                                        ,data_new
+                                        ,n_cores) {
   
   ## Packages ----
   require(doParallel)
